@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>Resources/x.png</file>
+    </qresource>
+    <qresource prefix="/">
+        <file>Resources/folder-outline-filled.png</file>
+    </qresource>
+</RCC>
