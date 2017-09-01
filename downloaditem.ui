@@ -64,7 +64,7 @@ p, li { white-space: pre-wrap; }
     <enum>QProgressBar::TopToBottom</enum>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="remove_btn">
    <property name="geometry">
     <rect>
      <x>460</x>
@@ -78,7 +78,7 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="icon">
     <iconset resource="resources.qrc">
-     <normaloff>:/icons/Resources/x.png</normaloff>:/icons/Resources/x.png</iconset>
+     <normaloff>:/Resources/x.png</normaloff>:/Resources/x.png</iconset>
    </property>
    <property name="autoRepeat">
     <bool>false</bool>
@@ -101,18 +101,8 @@ p, li { white-space: pre-wrap; }
      <string>Näätä</string>
     </property>
    </item>
-   <item>
-    <property name="text">
-     <string>Lumikko</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>Hukka</string>
-    </property>
-   </item>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="pause_btn">
    <property name="geometry">
     <rect>
      <x>420</x>
@@ -126,7 +116,7 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="icon">
     <iconset resource="resources.qrc">
-     <normaloff>:/Resources/folder-outline-filled.png</normaloff>:/Resources/folder-outline-filled.png</iconset>
+     <normaloff>:/Resources/pause.png</normaloff>:/Resources/pause.png</iconset>
    </property>
   </widget>
  </widget>

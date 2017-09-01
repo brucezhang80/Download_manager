@@ -16,9 +16,13 @@ public:
     void setText(QString string);
     void setValue(int i);
     ~downloaditem();
-
+private slots:
+    void on_pause_btn_clicked();
+    void on_remove_btn_clicked();
 private:
     Ui::downloaditem *ui;
+    bool paused;
+
 };
 
 #endif // DOWNLOADITEM_H

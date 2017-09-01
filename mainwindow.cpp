@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "QDebug"
+#include <QFileDialog>
 #include "downloaditem.h"
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -9,6 +10,9 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     this->setFixedSize(QSize(585, 305));
     ui->setupUi(this);
+
+    ui->url->setText("https://www.google.com");
+    ui->location->setText("C:/");
 
     QListWidgetItem *item = new QListWidgetItem(ui->listWidget);
     downloaditem *myWidget = new downloaditem();
@@ -24,9 +28,13 @@ MainWindow::MainWindow(QWidget *parent) :
 
 }
 void MainWindow::on_pushButton_clicked(){
-    qDebug("%s", qPrintable(ui->textEdit->toPlainText()));
+    qDebug("%s", qPrintable(ui->url->toPlainText()));
 }
-
+void MainWindow::on_folder_sel_clicked(){
+    QString dir = QFileDialog::getExistingDirectory(this, tr("Open Directory"),"/home", QFileDialog::ShowDirsOnly | QFileDialog::DontResolveSymlinks);
+    qDebug(qPrintable(dir));
+    ui->location->setText(dir);
+}
 MainWindow::~MainWindow()
 {
     delete ui;

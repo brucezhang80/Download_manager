@@ -30,15 +30,21 @@ SOURCES += \
 
 HEADERS += \
         mainwindow.h \
-    barwidget.h \
-    downloaditem.h
+    downloaditem.h \
+    barwidget.h
 
 FORMS += \
         mainwindow.ui \
     downloaditem.ui
 
 DISTFILES += \
-    Resources/x.png
+    Resources/x.png \
+    Resources/folder-outline-filled.png \
+    Resources/pause.png \
+    Resources/play.png \
+    Resources/x.png \
+    Resources/pause.png \
+    Resources/play.png
 
 RESOURCES += \
     resources.qrc
