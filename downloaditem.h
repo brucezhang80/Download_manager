@@ -19,6 +19,8 @@ public:
 private slots:
     void on_pause_btn_clicked();
     void on_remove_btn_clicked();
+signals:
+    void removeMe();
 private:
     Ui::downloaditem *ui;
     bool paused;

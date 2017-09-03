@@ -20,7 +20,7 @@
    <bool>false</bool>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="download_btn">
     <property name="geometry">
      <rect>
       <x>480</x>
@@ -31,16 +31,6 @@
     </property>
     <property name="text">
      <string>Download</string>
-    </property>
-   </widget>
-   <widget class="QTextEdit" name="url">
-    <property name="geometry">
-     <rect>
-      <x>80</x>
-      <y>10</y>
-      <width>391</width>
-      <height>21</height>
-     </rect>
     </property>
    </widget>
    <widget class="QListWidget" name="listWidget">
@@ -56,7 +46,7 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QTextEdit" name="location">
+   <widget class="QTextBrowser" name="location">
     <property name="enabled">
      <bool>true</bool>
     </property>
@@ -68,8 +58,26 @@
       <height>21</height>
      </rect>
     </property>
+    <property name="maximumSize">
+     <size>
+      <width>391</width>
+      <height>40</height>
+     </size>
+    </property>
+    <property name="inputMethodHints">
+     <set>Qt::ImhNone</set>
+    </property>
     <property name="frameShadow">
      <enum>QFrame::Sunken</enum>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="sizeAdjustPolicy">
+     <enum>QAbstractScrollArea::AdjustToContentsOnFirstShow</enum>
     </property>
     <property name="tabChangesFocus">
      <bool>false</bool>
@@ -122,6 +130,29 @@
     </property>
     <property name="text">
      <string>Save As</string>
+    </property>
+   </widget>
+   <widget class="QProgressBar" name="testBar">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>70</y>
+      <width>111</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="value">
+     <number>24</number>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="url">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>10</y>
+      <width>391</width>
+      <height>20</height>
+     </rect>
     </property>
    </widget>
   </widget>

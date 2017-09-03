@@ -15,8 +15,10 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 private slots:
-    void on_pushButton_clicked();
+    void removePressed();
+    void on_download_btn_clicked();
     void on_folder_sel_clicked();
+    void on_url_returnPressed();
 private:
     Ui::MainWindow *ui;
 };

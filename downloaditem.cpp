@@ -2,16 +2,19 @@
 #include "ui_downloaditem.h"
 #include "QPixmap"
 
+
+
 downloaditem::downloaditem(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::downloaditem)
 {
     ui->setupUi(this);
+    connect(this, SIGNAL(removeMe()), this->parent(), SLOT(removePressed()));
     paused = false;
 }
 
 void downloaditem::setText(QString string){
-    ui->textBrowser->setText(string);
+    ui->file->setText(string);
 }
 
 void downloaditem::setValue(int i){
@@ -28,7 +31,7 @@ void downloaditem::on_pause_btn_clicked(){
     }
 }
 void downloaditem::on_remove_btn_clicked(){
-    qDebug("DELET THIS");
+    emit removeMe();
 }
 downloaditem::~downloaditem()
 {
