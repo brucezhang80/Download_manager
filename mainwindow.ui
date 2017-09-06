@@ -6,12 +6,16 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>585</width>
-    <height>305</height>
+    <width>579</width>
+    <height>299</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Download Manager</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resources.qrc">
+    <normaloff>:/Resources/icon.png</normaloff>:/Resources/icon.png</iconset>
   </property>
   <property name="autoFillBackground">
    <bool>true</bool>
@@ -36,11 +40,17 @@
    <widget class="QListWidget" name="listWidget">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>90</y>
-      <width>511</width>
+      <x>30</x>
+      <y>80</y>
+      <width>461</width>
       <height>201</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
     </property>
     <property name="alternatingRowColors">
      <bool>true</bool>
@@ -129,7 +139,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Save As</string>
+     <string>Save To</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="url">

@@ -4,5 +4,6 @@
         <file>Resources/pause.png</file>
         <file>Resources/play.png</file>
         <file>Resources/x.png</file>
+        <file>Resources/icon.png</file>
     </qresource>
 </RCC>

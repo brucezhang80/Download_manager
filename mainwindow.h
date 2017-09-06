@@ -20,6 +20,11 @@ private slots:
     void on_folder_sel_clicked();
     void on_url_returnPressed();
 private:
+    void set_folder(QString);
+    QString get_folder();
+    void set_url(QString);
+    QString get_url();
+    QString folder;
     Ui::MainWindow *ui;
 };
 

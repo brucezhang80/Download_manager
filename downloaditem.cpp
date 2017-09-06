@@ -1,16 +1,21 @@
 #include "downloaditem.h"
 #include "ui_downloaditem.h"
-#include "QPixmap"
 
-
-
-downloaditem::downloaditem(QWidget *parent) :
+downloaditem::downloaditem(QWidget *parent, QString s_url, QString s_folder) :
     QWidget(parent),
+    url(s_url),
+    folder(s_folder),
     ui(new Ui::downloaditem)
 {
     ui->setupUi(this);
     connect(this, SIGNAL(removeMe()), this->parent(), SLOT(removePressed()));
     paused = false;
+
+    QStringList url_list = url.split('/');
+    filename = url_list.at(url_list.count()-1);
+    ui->file->setText(filename);
+    download_ctrl *control = new download_ctrl(this, url, folder, filename);
+
 }
 
 void downloaditem::setText(QString string){
