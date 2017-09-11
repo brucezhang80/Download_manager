@@ -27,14 +27,14 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    downloaditem.cpp \
-    download_ctrl.cpp
+    download_ctrl.cpp \
+    download_item.cpp
 
 HEADERS += \
         mainwindow.h \
-    downloaditem.h \
     barwidget.h \
-    download_ctrl.h
+    download_ctrl.h \
+    download_item.h
 
 FORMS += \
         mainwindow.ui \

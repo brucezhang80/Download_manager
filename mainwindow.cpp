@@ -2,7 +2,7 @@
 #include "ui_mainwindow.h"
 #include "QDebug"
 #include <QFileDialog>
-#include "downloaditem.h"
+#include "download_item.h"
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)

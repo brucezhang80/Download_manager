@@ -1,4 +1,4 @@
-#include "downloaditem.h"
+#include "download_item.h"
 #include "ui_downloaditem.h"
 
 downloaditem::downloaditem(QWidget *parent, QString s_url, QString s_folder) :
@@ -10,10 +10,10 @@ downloaditem::downloaditem(QWidget *parent, QString s_url, QString s_folder) :
     ui->setupUi(this);
     connect(this, SIGNAL(removeMe()), this->parent(), SLOT(removePressed()));
     paused = false;
-
     QStringList url_list = url.split('/');
     filename = url_list.at(url_list.count()-1);
     ui->file->setText(filename);
+    qDebug("Url: %s, filename: %s", url.toLatin1().data(), filename.toLatin1().data());
     download_ctrl *control = new download_ctrl(this, url, folder, filename);
 
 }

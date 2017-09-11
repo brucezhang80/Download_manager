@@ -14,7 +14,7 @@ class downloaditem : public QWidget
     Q_OBJECT
 
 public:
-    explicit downloaditem(QWidget *parent = 0, QString url = "http://www.google.com", QString folder = "C:/");
+    explicit downloaditem(QWidget *parent = 0, QString url = "https://www.google.com", QString folder = "C:/");
     void setText(QString string);
     void setValue(int i);
     ~downloaditem();
